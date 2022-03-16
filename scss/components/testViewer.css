@@ -1,0 +1,88 @@
+.testViewer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border: 1px solid black;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 5rem;
+  background-color: #eef0f5;
+}
+
+.testViewer__elem {
+  height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #CFD3DE;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  margin-top: 5rem;
+}
+
+.testViewer__elem__step {
+  border: 1px solid black;
+}
+
+.testViewer__elem__step__picture {
+  padding-bottom: 20rem;
+  background-color: #788cfa;
+  text-align: center;
+  vertical-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.testViewer__elem__step__desc {
+  width: 90%;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.testViewer__elem__step__desc__num {
+  padding: 0rem;
+  border: 1px solid #788cfa;
+  border-radius: 10rem;
+  height: 3rem;
+  width: 4rem;
+  color: #788cfa;
+  margin-right: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  vertical-align: center;
+  line-height: 3rem;
+}
+
+.testViewer__elem__step__desc__inst {
+  font-size: 1rem;
+}
+
+.testViewer__elem__warning {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  vertical-align: center;
+}
