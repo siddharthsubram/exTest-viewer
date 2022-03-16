@@ -25,19 +25,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border: 1px solid #CFD3DE;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   margin-top: 5rem;
 }
 
 .testViewer__elem__step {
   border: 1px solid black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
 }
 
 .testViewer__elem__step__picture {
-  padding-bottom: 20rem;
+  padding-bottom: 18rem;
   background-color: #788cfa;
   text-align: center;
   vertical-align: center;
@@ -65,7 +70,7 @@
   border: 1px solid #788cfa;
   border-radius: 10rem;
   height: 3rem;
-  width: 4rem;
+  width: 5rem;
   color: #788cfa;
   margin-right: 1rem;
   font-size: 2rem;
@@ -84,5 +89,64 @@
   width: 80%;
   text-align: center;
   font-size: 1rem;
-  vertical-align: center;
+  margin-top: auto;
+}
+
+.testViewer__arrowHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  border: 1px solid black;
+}
+
+.testViewer__arrowHolder__arrow {
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 10px;
+  background-color: blue;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 10px;
+  background-color: blue;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  right: -8px;
+  background-color: blue;
+}
+
+.arrow::after {
+  top: -12px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow::before {
+  top: 12px;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }

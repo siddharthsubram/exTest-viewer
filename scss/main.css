@@ -23,11 +23,6 @@ body {
           flex-direction: column;
 }
 
-.tester {
-  padding: 5rem;
-  background-color: red;
-}
-
 .stageSelector {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,19 +160,24 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border: 1px solid #CFD3DE;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
   margin-top: 5rem;
 }
 
 .testViewer__elem__step {
   border: 1px solid black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
 }
 
 .testViewer__elem__step__picture {
-  padding-bottom: 20rem;
+  padding-bottom: 18rem;
   background-color: #788cfa;
   text-align: center;
   vertical-align: center;
@@ -205,7 +205,7 @@ body {
   border: 1px solid #788cfa;
   border-radius: 10rem;
   height: 3rem;
-  width: 4rem;
+  width: 5rem;
   color: #788cfa;
   margin-right: 1rem;
   font-size: 2rem;
@@ -224,5 +224,5 @@ body {
   width: 80%;
   text-align: center;
   font-size: 1rem;
-  vertical-align: center;
+  margin-top: auto;
 }
