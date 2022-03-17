@@ -58,7 +58,7 @@
           transform: translateY(0rem);
 }
 
-.stageSelector__stages__elem__active {
+.stageSelector__stages__elem.active {
   color: #eef0f5;
   background-color: #5E72E4;
   font-weight: 1000;

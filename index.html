@@ -17,17 +17,13 @@
           <span>Current Stage:</span> This_stage
         </h2>
         <div class="stageSelector__stages">
-          <button onclick = "doesThisWork(1)" class="stageSelector__stages__elem stageSelector__stages__elem__active" for-stage="1">1</button>
-          <button onclick = "doesThisWork(2)" class="stageSelector__stages__elem" data-for-stage="2">2</button>
-          <button onclick = "doesThisWork(3)" class="stageSelector__stages__elem" data-for-stage="3">3</button>
-          <button onclick = "doesThisWork(4)" class="stageSelector__stages__elem" data-for-stage="4">4</button>
-          <button onclick = "doesThisWork(5)" class="stageSelector__stages__elem" data-for-stage="5">5</button>
-          <button onclick = "doesThisWork(6)" class="stageSelector__stages__elem" data-for-stage="6">6</button>
+          <button class="stageSelector__stages__elem" data-for-stage="1">1</button>
+          <button class="stageSelector__stages__elem" data-for-stage="2">2</button>
         </div>
       </div>
 
       <!-- First Stage -->
-      <div class="testViewer testViewer__active" data-stage = "1">
+      <div class="testViewer" data-stage = "1" id = "stage1">
 
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
@@ -132,7 +128,8 @@
     </section>
 
     <!-- Second Stage -->
-    <div class="testViewer" data-stage = "1">
+    <!-- <div class="testViewer testViewer__active" data-stage = "1"></div> -->
+    <div class="testViewer" data-stage = "2" id = "stage2">
 
       <div class="testViewer__elem">
         <div class="testViewer__elem__step">
@@ -212,35 +209,57 @@
         <p class="testViewer__elem__warning"> <span class = "highlightPrimary">Warning:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
       </div>
 
-      
-  
   </section>
 
     <script>
-      function doesThisWork(input){
-        //console.log(input); 
-      }
+      // let buttons = document.querySelectorAll('button')
+     
+      // buttons.forEach(button =>{
+      //   button.addEventListener('click', function() {
+      //     //sets all active buttons to inactive 
+      //     buttons.forEach(btn => btn.classList.remove('active'));
 
-      function setupStages() {
-        document.querySelectorAll(".stageSelector__stages__elem").forEach(button => {
+      //     //makes this button active 
+      //     this.classList.add('active'); 
+
+      //     console.log("MouseButtonWorks")
+      //   });
+      // });
+
+       function setupTabs () {
+
+        
+        document.querySelectorAll('button').forEach(button => {
           button.addEventListener('click', () => {
-            const stageBar = button.parentElement; 
-            const view = stageBar.parentElement.parentElement; 
-            const stageNumber = button.dataset.forStage;
-            const stageToActivate = view.querySelector('.testViewer[data-stage = "${stageNumber}"]');
+            console.log("MouseButtonWorks")
+            const buttonHolder = button.parentElement; 
+            const container = button.parentElement.parentElement.parentElement;
+            let tabs = document.querySelectorAll('.testViewer'); 
+            const stageNum = button.dataset.forStage; 
+            const stageToActivate = container.querySelector(`.testViewer[data-stage = "${stageNum}"]`);
 
-            console.log(stageBar); 
-            console.log(view); 
-            console.log(stageNumber); 
-            console.log(stageToActivate); 
+            console.log(container);
+            console.log(tabs);
+            console.log(stageNum);
+            console.log(stageToActivate);
+
+            buttonHolder.querySelectorAll(".stageSelector__stages__elem").forEach(button => {
+              button.classList.remove('active');
+            });
+
+            container.querySelectorAll(".testViewer").forEach(stage => {
+              stage.classList.remove('active');
+            });
+
+            button.clasList.add("active");
+            stageToActivate.classList.add("active");
           });
         });
-
-        document.addEventListener("DOMContentLoaded" , () => {
-          setupStages(); 
-        })
       }
 
+      document.addEventListener("DOMContentLoaded", () => {
+        setupTabs(); 
+      });
     </script>
 </body>
 </html>

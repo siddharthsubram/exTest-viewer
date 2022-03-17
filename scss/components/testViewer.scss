@@ -4,8 +4,9 @@ $color-grey: #CFD3DE;
 .testViewer{
   
   display: none;
+  
 
-  &__active{
+  &.active{
     display:flex; 
     flex-direction: row;
     justify-content: space-evenly;

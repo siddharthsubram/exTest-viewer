@@ -2,7 +2,7 @@
   display: none;
 }
 
-.testViewer__active {
+.testViewer.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

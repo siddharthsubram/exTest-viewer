@@ -44,7 +44,7 @@ $color-grey: #CFD3DE;
         transform: translateY(0rem);
       }
 
-      &__active{
+      &.active{
         color:$color-background;
         background-color: $color-primary; 
         font-weight:1000; 
