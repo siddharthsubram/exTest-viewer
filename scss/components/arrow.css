@@ -1,45 +1,46 @@
-.arrowHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.arrHolder {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   width: 80px;
   height: 60px;
   border: 1px solid black;
 }
 
-.arrow {
+.arr {
   position: absolute;
   top: 25px;
   width: 90%;
   height: 10px;
+  background-color: #5E72E4;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
 
-.arrow::after, .arrow::before {
+.arr::after, .arr::before {
   content: '';
   position: absolute;
   width: 60%;
   height: 10px;
   right: -8px;
-  background-color: #788cfa;
+  background-color: #5E72E4;
 }
 
-.arrow::after {
+.arr::after {
   top: -12px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.arrow::before {
+.arr::before {
   top: 12px;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);

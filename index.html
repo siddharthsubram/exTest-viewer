@@ -17,18 +17,13 @@
           <span>Current Stage:</span> This_stage
         </h2>
         <div class="stageSelector__stages">
-          <div class="stageSelector__stages__elem">1</div>
-          <div class="stageSelector__stages__elem">2</div>
-          <div class="stageSelector__stages__elem">3</div>
-          <div class="stageSelector__stages__elem">4</div>
-          <div class="stageSelector__stages__elem">5</div>
-          <div class="stageSelector__stages__elem">6</div>
+          <div onclick = "doesThisWork(1)" class="stageSelector__stages__elem">1</div>
+          <div onclick = "doesThisWork(2)" class="stageSelector__stages__elem">2</div>
+          <div onclick = "doesThisWork(3)" class="stageSelector__stages__elem">3</div>
+          <div onclick = "doesThisWork(4)" class="stageSelector__stages__elem">4</div>
+          <div onclick = "doesThisWork(5)" class="stageSelector__stages__elem">5</div>
+          <div onclick = "doesThisWork(6)" class="stageSelector__stages__elem">6</div>
         </div>
-      </div>
-
-
-      <div class="arrowHolder">
-        <div class="arrow"></div>
       </div>
 
       <div class="testViewer">
@@ -46,8 +41,14 @@
               </p>
             </div>
           </div>
-          <p class="testViewer__elem__warning"> Warning: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+          <p class="testViewer__elem__warning"> </p>
         </div>
+
+        <div class="testViewer__elem testViewer__elem__arrowBox">
+          <div class="testViewer__elem testViewer__elem__arrowBox__arrow">
+          </div>
+        </div>
+
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -62,8 +63,14 @@
               </p>
             </div>
           </div>
-          <p class="testViewer__elem__warning"> Warning: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+          <p class="testViewer__elem__warning">  <span class = "highlightPrimary">Warning:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
         </div>
+
+        <div class="testViewer__elem testViewer__elem__arrowBox">
+          <div class="testViewer__elem testViewer__elem__arrowBox__arrow ">
+          </div>
+        </div>
+        
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -78,8 +85,11 @@
               </p>
             </div>
           </div>
-          <p class="testViewer__elem__warning"> Warning: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+          <p class="testViewer__elem__warning"></p>
         </div>
+
+        
+
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -94,8 +104,14 @@
               </p>
             </div>
           </div>
-          <p class="testViewer__elem__warning"> Warning: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+          <p class="testViewer__elem__warning"> <span class = "highlightPrimary">Warning:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
         </div>
+
+        <div class="testViewer__elem testViewer__elem__arrowBox">
+          <div class="testViewer__elem testViewer__elem__arrowBox__arrow">
+          </div>
+        </div>
+
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -110,12 +126,17 @@
               </p>
             </div>
           </div>
-          <p class="testViewer__elem__warning"> Warning: Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+          <p class="testViewer__elem__warning"> </p>
         </div>
-      </div>
-
+        
+        
 
     </section>
-    
+    <script>
+      function doesThisWork(input){
+        console.log(input); 
+      }
+
+    </script>
 </body>
 </html>

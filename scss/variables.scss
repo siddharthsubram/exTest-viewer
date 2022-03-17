@@ -1,7 +1,14 @@
 // //colors 
 // $color--background: #eef0f5;
+$color-primary: #5E72E4; 
 
 // .tester{
 //   padding:5rem;
 //   background-color:red; 
 // }
+
+.highlightPrimary{
+  font-weight:800; 
+  color: $color-primary;
+  text-transform: uppercase;
+}

@@ -32,7 +32,7 @@ $color-grey: #CFD3DE;
       color:$color-primary;
       transition: all 0.5s; 
       box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px;
-
+      cursor: pointer;
       &:hover{
         transform: translateY(-0.5rem);
         color:$color-background; 

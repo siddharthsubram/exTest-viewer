@@ -1,1 +1,5 @@
-/* No CSS */
+.highlightPrimary {
+  font-weight: 800;
+  color: #5E72E4;
+  text-transform: uppercase;
+}

@@ -1,41 +1,42 @@
 
 $color-primary-light: #788cfa; 
+$color-primary: #5E72E4; 
 
-.arrowHolder {
-  display:flex; 
+.arrHolder {
+  display:inline-flex; 
   justify-content:center; 
   align-items:center; 
-  position: absolute;
+  position: relative;
   width: 80px;
   height: 60px;
-  
+
   border:1px solid black; 
 }
 
-.arrow {
+.arr {
   position: absolute;
   top: 25px;
   width: 90%;
   height: 10px;
-  //background-color: $color-primary-light;
+  background-color: $color-primary;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
   border-radius:2px; 
 }
 
-.arrow::after, .arrow::before {
+.arr::after, .arr::before {
   content: '';
   position: absolute;
   width: 60%;
   height: 10px;
   right: -8px;
-  background-color: $color-primary-light;
+  background-color: $color-primary;
 }
-.arrow::after {
+.arr::after {
   top: -12px;
   transform: rotate(45deg);
 }
 
-.arrow::before {
+.arr::before {
   top: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
   transform: rotate(-45deg);
