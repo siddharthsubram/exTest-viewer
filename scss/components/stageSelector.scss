@@ -23,7 +23,7 @@ $color-grey: #CFD3DE;
     padding-top:2rem; 
     &__elem{
       margin-right: 1.5rem;
-      padding:0.5rem; 
+      padding:0.75rem; 
       font-size:1.5rem;
       text-align: center;
       vertical-align: middle;
@@ -38,10 +38,17 @@ $color-grey: #CFD3DE;
         color:$color-background; 
         background-color: $color-primary;
         font-weight:1000; 
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        //box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
       &:active{
         transform: translateY(0rem);
+      }
+
+      &__active{
+        color:$color-background;
+        background-color: $color-primary; 
+        font-weight:1000; 
+        
       }
     }
   }

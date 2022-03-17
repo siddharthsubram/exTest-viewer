@@ -2,13 +2,18 @@ $color-background: #eef0f5;
 $color-primary-light: #788cfa; 
 $color-grey: #CFD3DE; 
 .testViewer{
-  display:flex; 
-  flex-direction: row;
-  justify-content: space-evenly;
-  border: 1px solid black;
-  flex-wrap: wrap;
-  padding-top:5rem; 
-  background-color:$color-background; 
+  
+  display: none;
+
+  &__active{
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    padding-top:5rem; 
+    background-color:$color-background; 
+  }
 
   &__elem{
     height:35rem;

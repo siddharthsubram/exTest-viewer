@@ -17,16 +17,18 @@
           <span>Current Stage:</span> This_stage
         </h2>
         <div class="stageSelector__stages">
-          <div onclick = "doesThisWork(1)" class="stageSelector__stages__elem">1</div>
-          <div onclick = "doesThisWork(2)" class="stageSelector__stages__elem">2</div>
-          <div onclick = "doesThisWork(3)" class="stageSelector__stages__elem">3</div>
-          <div onclick = "doesThisWork(4)" class="stageSelector__stages__elem">4</div>
-          <div onclick = "doesThisWork(5)" class="stageSelector__stages__elem">5</div>
-          <div onclick = "doesThisWork(6)" class="stageSelector__stages__elem">6</div>
+          <button onclick = "doesThisWork(1)" class="stageSelector__stages__elem stageSelector__stages__elem__active" for-stage="1">1</button>
+          <button onclick = "doesThisWork(2)" class="stageSelector__stages__elem" data-for-stage="2">2</button>
+          <button onclick = "doesThisWork(3)" class="stageSelector__stages__elem" data-for-stage="3">3</button>
+          <button onclick = "doesThisWork(4)" class="stageSelector__stages__elem" data-for-stage="4">4</button>
+          <button onclick = "doesThisWork(5)" class="stageSelector__stages__elem" data-for-stage="5">5</button>
+          <button onclick = "doesThisWork(6)" class="stageSelector__stages__elem" data-for-stage="6">6</button>
         </div>
       </div>
 
-      <div class="testViewer">
+      <!-- First Stage -->
+      <div class="testViewer testViewer__active" data-stage = "1">
+
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -88,8 +90,6 @@
           <p class="testViewer__elem__warning"></p>
         </div>
 
-        
-
         <div class="testViewer__elem">
           <div class="testViewer__elem__step">
             <div class="testViewer__elem__step__picture">
@@ -128,13 +128,117 @@
           </div>
           <p class="testViewer__elem__warning"> </p>
         </div>
-        
-        
-
+    
     </section>
+
+    <!-- Second Stage -->
+    <div class="testViewer" data-stage = "1">
+
+      <div class="testViewer__elem">
+        <div class="testViewer__elem__step">
+          <div class="testViewer__elem__step__picture">
+            test_image
+          </div>
+          <div class="testViewer__elem__step__desc">
+            <h4 class="testViewer__elem__step__desc__num">
+              1
+            </h4>
+            <p class="testViewer__elem__step__desc__inst">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iure.
+            </p>
+          </div>
+        </div>
+        <p class="testViewer__elem__warning">  <span class = "highlightPrimary">Warning:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+      </div>
+
+      <div class="testViewer__elem testViewer__elem__arrowBox">
+        <div class="testViewer__elem testViewer__elem__arrowBox__arrow">
+        </div>
+      </div>
+
+      <div class="testViewer__elem">
+        <div class="testViewer__elem__step">
+          <div class="testViewer__elem__step__picture">
+            test_image
+          </div>
+          <div class="testViewer__elem__step__desc">
+            <h4 class="testViewer__elem__step__desc__num">
+              2
+            </h4>
+            <p class="testViewer__elem__step__desc__inst">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iure.
+            </p>
+          </div>
+        </div>
+        <p class="testViewer__elem__warning"> </p>
+      </div>
+
+      <div class="testViewer__elem testViewer__elem__arrowBox">
+        <div class="testViewer__elem testViewer__elem__arrowBox__arrow ">
+        </div>
+      </div>
+      
+      <div class="testViewer__elem">
+        <div class="testViewer__elem__step">
+          <div class="testViewer__elem__step__picture">
+            test_image
+          </div>
+          <div class="testViewer__elem__step__desc">
+            <h4 class="testViewer__elem__step__desc__num">
+              3
+            </h4>
+            <p class="testViewer__elem__step__desc__inst">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iure.
+            </p>
+          </div>
+        </div>
+        <p class="testViewer__elem__warning"></p>
+      </div>
+
+      <div class="testViewer__elem">
+        <div class="testViewer__elem__step">
+          <div class="testViewer__elem__step__picture">
+            test_image
+          </div>
+          <div class="testViewer__elem__step__desc">
+            <h4 class="testViewer__elem__step__desc__num">
+              4
+            </h4>
+            <p class="testViewer__elem__step__desc__inst">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iure.
+            </p>
+          </div>
+        </div>
+        <p class="testViewer__elem__warning"> <span class = "highlightPrimary">Warning:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio inventore, iure vitae deleniti explicabo laudantium.</p>
+      </div>
+
+      
+  
+  </section>
+
     <script>
       function doesThisWork(input){
-        console.log(input); 
+        //console.log(input); 
+      }
+
+      function setupStages() {
+        document.querySelectorAll(".stageSelector__stages__elem").forEach(button => {
+          button.addEventListener('click', () => {
+            const stageBar = button.parentElement; 
+            const view = stageBar.parentElement.parentElement; 
+            const stageNumber = button.dataset.forStage;
+            const stageToActivate = view.querySelector('.testViewer[data-stage = "${stageNumber}"]');
+
+            console.log(stageBar); 
+            console.log(view); 
+            console.log(stageNumber); 
+            console.log(stageToActivate); 
+          });
+        });
+
+        document.addEventListener("DOMContentLoaded" , () => {
+          setupStages(); 
+        })
       }
 
     </script>

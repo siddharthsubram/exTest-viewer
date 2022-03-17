@@ -31,7 +31,7 @@
 
 .stageSelector__stages__elem {
   margin-right: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-size: 1.5rem;
   text-align: center;
   vertical-align: middle;
@@ -51,11 +51,15 @@
   color: #eef0f5;
   background-color: #5E72E4;
   font-weight: 1000;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .stageSelector__stages__elem:active {
   -webkit-transform: translateY(0rem);
           transform: translateY(0rem);
+}
+
+.stageSelector__stages__elem__active {
+  color: #eef0f5;
+  background-color: #5E72E4;
+  font-weight: 1000;
 }
